@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12 border-xs-bottom">
+    <h2></h2>
+    <nz-switch [(ngModel)]="mode"></nz-switch>
+    Menu Mode
+    <br />
+    <br />
+    <ul nz-menu [nzMode]="mode ? 'vertical' : 'inline'" [nzTheme]="dark ? 'dark' : 'light'">
+      <ng-container *ngFor="let menu of consoleMenu">
+        <li nz-submenu [nzTitle]="menu.name" [nzIcon]="menu.icon">
+          <ul>
+            <ng-container *ngFor="let item of menu.children">
+              <li nz-menu-item [routerLink]="item.router">{{ item.name }}</li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12 mb-xs-5r">
+      <router-outlet></router-outlet>
+  </div>
+</div>
+

@@ -1,0 +1,46 @@
+<div class="header__container d-print-none">
+  <div class="container-fluid" style="max-width: 1440px;">
+    <header class="pt-3 pb-4">
+      <div class="topbar">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="logoContainer text-center" [routerLink]="['/home']">
+                      <div class="logo d-print-none">
+                        <img src="assets/images/logo.svg" width="80" class="mr-2 img-fluid" alt="Visit Kurdistan QR" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 p-0 m-0">
+                  </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <div class="d-none d-md-block">
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12">
+              <div class="row mt-2 text-center padding-left-xs-20">
+                <ng-container *ngIf="authService.checkAuth; else noauth">
+                  <div>
+                    <nz-badge [nzCount]="authService.unReadNotifications" [nzOffset]="[-15,1]">
+                      <button nz-button nzType="default" nzSize="large" nzShape="circle" class="ml-2 mr-3" [routerLink]="['/user/notifications']">
+                        <i class="fe fe-bell"></i>
+                      </button>
+                    </nz-badge>
+                  </div>
+                  <div>
+                    <kit-topbar-user-menu [user]="authService.user" [profileImageUrl]="authService.profileImageUrl"></kit-topbar-user-menu>
+                  </div>
+                </ng-container>
+                <ng-template #noauth>
+                </ng-template>
+              </div>
+            </div>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
