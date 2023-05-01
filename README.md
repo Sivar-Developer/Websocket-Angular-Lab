@@ -1,8 +1,7 @@
-### Clean UI KIT Pro Angular Preview ###
+### Angular Websocket cunsumer using Laravel framework ###
 https://kit-angular.cleanuitemplate.com
 
 ### Documentation ###
-Please read documentation here https://docs.cleanuitemplate.com
 
 ### Quick Start ###
 * Install latest node.js: https://nodejs.org​
@@ -13,4 +12,4 @@ Please read documentation here https://docs.cleanuitemplate.com
 * Or build production app `yarn build` or `ng build`
 
 ### Support ###
-Use GitHub Issues for tracking bugs and creating new feature requests or write to [support@sellpixels.com](mailto:support@sellpixels.com).
+
