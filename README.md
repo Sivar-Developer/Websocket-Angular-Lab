@@ -1,5 +1,5 @@
 ### Angular Websocket cunsumer using Laravel framework ###
-https://kit-angular.cleanuitemplate.com
+https://websocket.appspot.fragmatica.com/
 
 ### Documentation ###
 
